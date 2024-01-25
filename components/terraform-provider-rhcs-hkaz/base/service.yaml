@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: terraform-provider-rhcs-hkaz
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: terraform-provider-rhcs-hkaz
+    app.kubernetes.io/part-of: terraform-provider-rhcs-1
+  name: terraform-provider-rhcs-hkaz
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: terraform-provider-rhcs-hkaz
+status:
+  loadBalancer: {}
